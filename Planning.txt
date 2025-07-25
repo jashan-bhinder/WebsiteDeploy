@@ -1,0 +1,7 @@
+This is the planning file, there are a few mandatory things that we need to be able to do
+before the completion of this project
+    1. Know how to deploy the website
+    2. Modularize all of the files very well
+    3. Create Unit Testing and Comments
+    4. Add documentation similar to what we did in Seng 300
+    5. Do not make too complex and get burnt out early
