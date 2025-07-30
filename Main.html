@@ -7,6 +7,82 @@
 <body>
 
         <h1>Rock Paper Scissors Game</h1>
-    <script src = "Main.js"></script>
+
+        <h2> Choose your hand</h2>
+
+        <button id="rockButton">Rock</button>
+        <button id="paperButton">Paper</button>
+        <button id="scissorsButton">Scissors</button>
+
+        <div id="result"></div>
+
+        <h2>Your Opponent Chooses</h2>
+
+        <div id="opponentResult"></div>
+
+        <h3> Winner Is</h3>
+        <div id="winnerResult"></div>
+
+    <script>
+
+        function randomOpponentChoice(){
+            const randNum = Math.floor(Math.random() * 3)
+            if (randNum === 0){
+                return "GameImages/rock-drawing.png";
+            }else if (randNum === 1){
+                return "GameImages/scissors-drawing.png";
+            }else{
+                return "GameImages/paper-drawing.png";
+            }
+        }
+        document.addEventListener('DOMContentLoaded', function () {
+            const rockButton = document.getElementById("rockButton");
+            const paperButton = document.getElementById("paperButton");
+            const scissorsButton = document.getElementById("scissorsButton");
+            const resultArea = document.getElementById("result");
+            const opponentResult = document.getElementById("opponentResult");
+            const winnerResult = document.getElementById("winnerResult");
+
+
+
+            rockButton.addEventListener("click", function () {
+                resultArea.innerHTML = '<img src="GameImages/rock-drawing.png" width ="200">';
+                const image1 = randomOpponentChoice();
+                const playerChoice = "GameImages/rock-drawing.png"
+                opponentResult.innerHTML = `<img src="${image1}" width ="200">`;
+                if (image1 == playerChoice)
+                    winnerResult.innerHTML = '<h1> TIE </h1>';
+                else if (image1 == "GameImages/scissors-drawing.png")
+                    winnerResult.innerHTML = '<h1> YOU </h1>';
+                else if (image1 == "GameImages/paper-drawing.png")
+                    winnerResult.innerHTML = '<h1> OPPONENT </h1>';
+
+            });
+            scissorsButton.addEventListener("click", function () {
+                resultArea.innerHTML = '<img src="GameImages/scissors-drawing.png" width ="200">';
+                const image1 = randomOpponentChoice();
+                const playerChoice = "GameImages/scissors-drawing.png"
+                opponentResult.innerHTML = `<img src="${image1}" width ="200">`;
+                if (image1 == playerChoice)
+                    winnerResult.innerHTML = '<h1> TIE </h1>';
+                else if (image1 == "GameImages/paper-drawing.png")
+                    winnerResult.innerHTML = '<h1> YOU </h1>';
+                else if (image1 == "GameImages/rock-drawing.png")
+                    winnerResult.innerHTML = '<h1> OPPONENT </h1>';
+            });
+            paperButton.addEventListener("click", function () {
+                resultArea.innerHTML = '<img src="GameImages/paper-drawing.png" width ="200">';
+                const image1 = randomOpponentChoice();
+                const playerChoice = "GameImages/paper-drawing.png"
+                opponentResult.innerHTML = `<img src="${image1}" width ="200">`;
+                if (image1 == playerChoice)
+                    winnerResult.innerHTML = '<h1> TIE </h1>';
+                else if (image1 == "GameImages/rock-drawing.png")
+                    winnerResult.innerHTML = '<h1> YOU </h1>';
+                else if (image1 == "GameImages/sciossors-drawing.png")
+                    winnerResult.innerHTML = '<h1> OPPONENT </h1>';
+            });
+        });
+    </script>
 </body>
 </html>
