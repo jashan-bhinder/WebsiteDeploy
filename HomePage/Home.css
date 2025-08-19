@@ -39,6 +39,11 @@ html,body{
     background-color: black;
     z-index: 2;
 }
+#RockPaperScissorsDescription{
+    background-color: white;
+    height: 600px;
+    width: 100%;
+}
 .Dashboard-Buttons {
     height: 100%;
     cursor: pointer;
@@ -56,4 +61,41 @@ html,body{
     align-items: center;
     gap: 20%;
     height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#ToBeContinued {
+    padding-top: 50vh;
+    background-color: #eeebe7;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    font-weight: 900;
+    font-size: 6vw;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.to-be-line {
+    color: black;
+}
+
+.continued-line {
+    color: black;
+    margin-left: 2ch;
 }
